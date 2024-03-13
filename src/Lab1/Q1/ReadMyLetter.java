@@ -10,7 +10,7 @@ public class ReadMyLetter {
         // Part 1
 
         // Name of the file
-        String fileName = "src/Lab1/Q1/ZiYang_U2102745.txt";
+        String fileName = "src/Lab1/Q1/ZiYang_12345678.txt";
 
         try {
             /*
