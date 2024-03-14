@@ -1,12 +1,10 @@
 package Lab1.Q2;
 
-import java.io.BufferedReader;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
-public class ReadCharacters {
+public class Q2b {
     public static void main(String[] args) {
         String[] fileNameArray = {
                 "src/Lab1/Q2/text1.txt",
