@@ -2,9 +2,9 @@ package Lab2.Q5;
 
 public class FindMax {
     public static void main(String[] args) {
-        Integer[] intArr = new Integer[]{1, 2, 3};
-        String[] strArr = new String[]{"red", "green", "blue"};
-        Circle[] circleArr = new Circle[]{new Circle(3), new Circle(2.9), new Circle(5.9)};
+        Integer[] intArr = {1, 2, 3};
+        String[] strArr = {"red", "green", "blue"};
+        Circle[] circleArr = {new Circle(3), new Circle(2.9), new Circle(5.9)};
 
         System.out.println("Maximum in Integer Array: " + max(intArr));
         System.out.println("Maximum in String Array: " + max(strArr));
@@ -32,15 +32,17 @@ public class FindMax {
         public int compareTo(Circle c) {
             if (this.radius < c.radius)
                 return -1;
-            else if (this.radius == c.radius)
-                return 0;
-            else
+            else if (this.radius > c.radius)
                 return 1;
+            else
+                return 0;
         }
 
         @Override
         public String toString() {
-            return "Circle radius: " + radius;
+            return "Circle{" +
+                    "radius=" + radius +
+                    '}';
         }
     }
 }

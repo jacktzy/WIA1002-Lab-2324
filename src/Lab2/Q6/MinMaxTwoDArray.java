@@ -3,6 +3,7 @@ package Lab2.Q6;
 public class MinMaxTwoDArray {
     public static void main(String[] args) {
         Integer[][] numbers = {{4, 5, 6}, {1, 2, 3}};
+        
         System.out.println("Minimum: " + min(numbers));
         System.out.println("Maximum: " + max(numbers));
     }
