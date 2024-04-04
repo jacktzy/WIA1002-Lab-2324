@@ -242,11 +242,23 @@ public class MyLinkedList<E> {
     /**
      * Print all elements in reverse order
      */
+    // Method 1: use get() method
     public void reverse() {
         for (int i = size - 1; i >= 0; i--) {
             System.out.print(get(i) + " ");
         }
         System.out.println();
+    }
+
+    // Method 2: use Depth First Search
+    public void reverse2() {
+        dfs(head);
+    }
+
+    private void dfs(Node<E> node) {
+        if (node == null) return;
+        dfs(node.next);
+        System.out.printf("%s ", node.element);
     }
 
     public int getSize() {
@@ -258,6 +270,7 @@ public class MyLinkedList<E> {
     /**
      * Returns the value of the middle element of a linked list.
      */
+    // Method 1: Find the middle
     public E getMiddleValue() {
         Node<E> current = head;
         int mid = size / 2;
@@ -265,5 +278,15 @@ public class MyLinkedList<E> {
             current = current.next;
         }
         return current.element;
+    }
+
+    // Method 2: Use slow and fast pointer
+    public E getMiddleValue2() {
+        Node<E> fast = head, slow = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow.element;
     }
 }

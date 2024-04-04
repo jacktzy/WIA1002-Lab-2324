@@ -22,8 +22,8 @@ public class TestMyLinkedList {
         System.out.println("\nThe number of elements in the list is : " + cList.getSize());
 
         // 5e) Retrieve the first and last value.
-        System.out.println("\nThe first value in the list is : " + cList.get(0));
-        System.out.println("The last value in the list is : " + cList.get(4));
+        System.out.println("\nThe first value in the list is : " + cList.getFirst());
+        System.out.println("The last value in the list is : " + cList.getLast());
 
         // 5f) Delete the third value.
         System.out.println("\nThe removed value in the list is : " + cList.remove(2));
@@ -32,7 +32,7 @@ public class TestMyLinkedList {
 
         // 5g) Retrieve the index location for the second and third value.
         System.out.println("\nThe index value for item 'b'(second item) of the list is : " + cList.indexOf('b'));
-        System.out.println("\nThe index value for item 'd'(third item) of the list is : " + cList.lastIndexOf('d'));
+        System.out.println("\nThe index value for item 'd'(third item) of the list is : " + cList.indexOf('d'));
 
         // 5h) Checks if the list has the value ‘c’.
         System.out.println("\nDoes the list contain item 'c' : " + cList.contains('c'));
