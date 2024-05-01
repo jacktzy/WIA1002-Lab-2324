@@ -13,9 +13,8 @@ public class TestComparableBook {
         BookQueue.add(new ComparableBook(6481, "Java: Programming Basic for Absolute Beginner"));
 
         System.out.println(BookQueue);
-        while (BookQueue.peek() != null) {
-            System.out.println("Head Element: " + BookQueue.peek());
-            BookQueue.remove();
+        while (!BookQueue.isEmpty()) {
+            System.out.println("Head Element: " + BookQueue.poll());
             System.out.println("Priority queue: " + BookQueue);
         }
     }

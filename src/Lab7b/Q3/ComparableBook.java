@@ -32,12 +32,8 @@ public class ComparableBook implements Comparable<ComparableBook> {
 
     @Override
     public int compareTo(ComparableBook otherBook) {
-        if (this.getId() < otherBook.getId()) {
-            return -1;
-        } else if (this.getId() > otherBook.getId()) {
-            return 1;
-        } else {
-            return this.getName().compareTo(otherBook.getName());
-        }
+        if (this.getId() < otherBook.getId()) return -1;
+        if (this.getId() > otherBook.getId()) return 1;
+        return this.getName().compareTo(otherBook.getName());
     }
 }
